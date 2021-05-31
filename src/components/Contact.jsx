@@ -62,7 +62,6 @@ export const Contact = () => {
                                     placeholder="Subject"
                                     {...register("subject")}
                                 />
-
                                 <p className="text-danger">{errors.subject?.message}</p>
                             </Form.Group>
                             <Form.Group controlId="formBasicEmail">
@@ -119,5 +118,4 @@ export const Contact = () => {
         </Container>
     )
 }
-
 export default Contact;

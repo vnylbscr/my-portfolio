@@ -11,7 +11,6 @@ const Subtitle = styled.h1({
 })
 export const Footer = () => {
     return (
-        
         <Container className="d-flex justify-content-end align-items-center h-100" fluid
             style={{
                 backgroundColor: "#0a1931"

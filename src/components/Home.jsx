@@ -5,6 +5,7 @@ import myBackground from '../assets/background.jpg';
 import TextTransition, { presets } from "react-text-transition";
 import Typed from "react-typed";
 import axios from 'axios';
+
 const texts = [
     "Infinite skills create miracles.",
     "No such things as halfway crooks.",
@@ -33,7 +34,6 @@ const Subtitle = styled.h1({
     paddingTop: 20,
     textAlign: 'center',
 });
-
 export const Home = () => {
     const [index, setIndex] = useState(0);
     const [data, setData] = useState(null);

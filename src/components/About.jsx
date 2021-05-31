@@ -20,6 +20,7 @@ const Title = styled.p`
     line-height:2em;
     box-sizing:border-box;
     white-space:normal !important;
+    text-decoration: none;
     `
 export const About = () => {
     const [author, setAuthor] = useState(null);
@@ -53,8 +54,8 @@ export const About = () => {
                     <Col xs={6}>
                         <Title>
                             {author.bio}
-                            Interested in working with me? <Link to="/contact">
-                            Get in touch
+                            Interested in working with me? <Link to="/contact" style={{ textDecoration: 'none' }}>
+                                Get in touch
                             </Link> and i'd be happy to talk to you.
                         </Title>
                     </Col>

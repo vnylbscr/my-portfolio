@@ -55,7 +55,6 @@ export const Works = () => {
     const [posts, setPosts] = useState();
     // const [emptyPost, setEmptyPost] = useState(false); 
     useEffect(() => {
-        
         sanityClient
             .fetch(
                 `*[_type == "post"] | order(publishedAt desc){
@@ -92,17 +91,17 @@ export const Works = () => {
     console.log(posts && posts.publishedAt);
 
     return (
-
         <Container fluid className="d-flex bg-dark justify-content-center align-items-center"
             style={{ backgroundColor: "#282a36" }}>
             {/* post content */}
-            <Container className="bg-dark" style={{ width: 650 }}>
+            <Container className="bg-dark" style={{ width: 750 }}>
                 {posts && posts.map((post, index) => {
                     return (
                         <div key={index} data-aos="fade-up">
                             <Col className="my-5">
                                 <Image src={post.mainImage.asset.url} alt="" className="rounded img-fluid" />
-                                <Link to={"/works/" + post.slug.current} key={post.slug.current}>
+                                <Link to={"/works/" + post.slug.current} key={post.slug.current} 
+                                style={{ textDecoration: 'none' }}>
                                     <PostTitle className="mt-3 d-flex text-center">
                                         {post.title}
                                     </PostTitle>

@@ -2,20 +2,25 @@ import React, { useState } from 'react';
 import { Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
 import { SocialIcon } from 'react-social-icons';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import Headroom from "react-headroom";
-const HeaderTitle = styled.h2`
-    font-family: 'KoHo', cursive;
-    font-size:50px;
+
+
+const HeaderTitle = styled.h1`
+    font-family: 'KoHo';
+    font-size:40px;
     color:#fff;
     font-weight:200;
-    -webkit-transition: color 1s;
-    transition: color 1s;
-    &:hover,
-    &:focus{
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    -webkit-transition:all ease-in-out .5s;
+    transition:all ease-in-out .5s;
+    display: inline-block;
+    &:hover{
         color:rgb(73, 194, 216);
     }
 `
+
 const HeaderSubtitle = styled.h3`
     font-family: 'KoHo';
     font-size:30px;
@@ -38,10 +43,10 @@ const styles = {
         color: '#fff',
         fontWeight: '200',
         fontSize: 30,
-        paddingLeft: 30
+        paddingLeft: 30,
+        textDecoration:'none'
     }
 }
-
 const Header = () => {
     return (
         <Headroom disable>
@@ -50,7 +55,7 @@ const Header = () => {
                     <NavLink to="/">
                         <HeaderTitle>
                             Mert's Blog
-                    </HeaderTitle>
+                        </HeaderTitle>
                     </NavLink>
                 </Navbar.Brand>
                 <Navbar.Collapse id="basic-navbar-nav">

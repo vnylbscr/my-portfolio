@@ -87,7 +87,6 @@ export const Works = () => {
             </div>
         )
     }
-
     console.log(posts && posts.publishedAt);
 
     return (

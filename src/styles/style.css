@@ -1,0 +1,53 @@
+.container {
+    background-color: lightgoldenrodyellow;
+    flex: 2;
+    border-radius: 30px;
+}
+
+.nameTitle {
+    font-family: 'Courier New', Courier, monospaces;
+    margin-left: 80px;
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.infTitle {
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.image {
+    border-radius: 100px;
+    margin-left: 20px;
+}
+
+.strong {
+    font-weight: bold;
+    
+}
+.projectTitle{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.projectList{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 20px;
+    font-variant: small-caps;
+    margin: 10px;
+
+}
+a:link, a:visited {    
+    text-decoration: none;
+    display: inline-block;
+  }
+
+.footerIcons{
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+    
+}

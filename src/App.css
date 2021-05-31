@@ -1,0 +1,85 @@
+::-webkit-scrollbar{
+    width: 10px solid;
+}
+
+.love {
+    display: inline-block;
+    position: relative;
+    color: #ff79c6;
+    top: .2em;
+    font-size: 2em;
+    -webkit-animation: love 1s linear infinite alternate-reverse;
+    animation: love 1s linear infinite alternate-reverse;
+}
+
+@keyframes love {
+    from {
+        transform: scale(.9);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+.container-spinner{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+}
+.block-content{
+    color:rgb(194, 194, 194);
+    margin: 10px 10px;
+    font-family: "KoHo", "cursive";
+    font-size: 25px;
+    line-height: 1.6;
+    margin-top: 20px;
+    word-spacing: 1px;
+}
+.thumbnail{
+    resize: vertical;
+    z-index: 4;
+}
+.spinner{
+    display:flex;
+    width: 500px;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.blog{
+    width: 950px;
+    padding: 0 2rem;
+    margin: 60px auto 0;
+    background-color: transparent;
+}
+.contact-container{
+    width: auto;
+    height: auto;
+}
+.contact{
+    margin: 60px auto;
+}
+.social-icon{
+    margin: 0 10px 0 10px;
+    transition: transform 250ms;
+    display: inline-block;
+}
+.social-icon:hover{
+    transform: translateY(-2px);
+}
+.twitter-username{
+    text-decoration: none;
+    color: #ff79c6;
+}
+.twitter-username:hover{
+    color: #ff79c6;
+}
+.about{
+    transition: all 1s;
+}
+.about:hover{
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1)
+}

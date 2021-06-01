@@ -11,6 +11,7 @@ import tr from "dayjs/locale/tr";
 import relativeTime from "dayjs/plugin/relativeTime";
 dayjs.locale(tr);
 dayjs.extend(relativeTime);
+
 const PostTitle = styled.h1`
     font-family:'KoHo';
     font-size: 50px;
@@ -101,8 +102,8 @@ export const Post = () => {
                     <BlockContent
                         blocks={postData.body}
                         imageOptions={{ w: 700, h: 800, fit: 'max' }}
-                        projectId="nnice2kn"
-                        dataset="production"
+                        projectId={process.env.REACT_APP_PROJECT_ID}
+                        dataset={process.env.REACT_APP_DATASET}
                         className="block-content"
                         serializers={serializers}
                     />

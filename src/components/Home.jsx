@@ -38,7 +38,7 @@ export const Home = () => {
     const [index, setIndex] = useState(0);
     const [data, setData] = useState(null);
     useEffect(() => {
-        axios.get("/api")
+        axios.get("https://mert-blog-server.herokuapp.com/api")
             .then((response) => {
                 setData(response.data.message);
             })
@@ -46,7 +46,6 @@ export const Home = () => {
             setIndex(index => index + 1),
             4000
         );
-        console.log(data);
         return () => {
             clearTimeout(intervalId);
         }

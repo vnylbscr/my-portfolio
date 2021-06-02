@@ -23,18 +23,17 @@ export const Contact = () => {
     const onSubmit = async data => {
         try {
             setLoading(true);
-            const res = await axios.post("/api", data);
+            const res = await axios.post("https://mert-blog-server.herokuapp.com/api", data);
             if (res.status === 200) {
                 setResponseMessage(res.data);
                 setLoading(false);
                 reset();
             } else {
-                console.log("Bir hata meydana geldi.", res);
                 setLoading(false);
+                setResponseMessage(res.data);
             }
         } catch (error) {
             setLoading(false);
-            console.log(error);
         }
     };
     return (

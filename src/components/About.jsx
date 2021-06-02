@@ -35,10 +35,9 @@ export const About = () => {
                 }
             `)
                 .then((data) => {
-                    console.log(data[0]);
                     setAuthor(data[0]);
                 })
-                .catch(error => console.log(error))
+                .catch(error => console.error())
         }
         return () => {
             isMounted = true;

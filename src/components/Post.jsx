@@ -63,7 +63,6 @@ export const Post = () => {
             )
             .then((data) => {
                 setPostData(data[0]);
-                console.log(data[0]);
             })
             .catch(console.error);
     }, [slug]);

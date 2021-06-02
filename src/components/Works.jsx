@@ -75,7 +75,6 @@ export const Works = () => {
             }`
             )
             .then((data) => {
-                console.log(data);
                 setPosts(data);
             })
             .catch(console.error);
@@ -87,8 +86,6 @@ export const Works = () => {
             </div>
         )
     }
-    console.log(posts && posts.publishedAt);
-
     return (
         <Container fluid className="d-flex bg-dark justify-content-center align-items-center"
             style={{ backgroundColor: "#282a36" }}>

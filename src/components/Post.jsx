@@ -5,10 +5,10 @@ import styled from "styled-components";
 import sanityClient from "../sanity-client/client";
 import BlockContent from "@sanity/block-content-to-react";
 import { serializers } from "../serializer/serializer";
-import imageUrlBuilder from "@sanity/image-url";
 import dayjs from "dayjs";
 import tr from "dayjs/locale/tr";
 import relativeTime from "dayjs/plugin/relativeTime";
+import { urlFor } from "../util/sanityImageBuilder";
 dayjs.locale(tr);
 dayjs.extend(relativeTime);
 
@@ -34,10 +34,7 @@ const DateTitle = styled(UserTitle)`
 const ReadTimeTitle = styled(DateTitle)`
   font-size: 20px;
 `;
-const builder = imageUrlBuilder(sanityClient);
-function urlFor(source) {
-  return builder.image(source);
-}
+
 export const Post = () => {
   const [postData, setPostData] = useState(null);
   const [error, setError] = useState(null);
@@ -70,14 +67,14 @@ export const Post = () => {
       });
   }, [slug]);
   if (!postData) {
-      return <Spinner animation="border" size="sm"></Spinner>
+    return <Spinner animation="border" size="sm"></Spinner>;
   }
   if (error) {
-    return <div style={{ flexGrow: 1 }}>
-        <p>
-            {error}
-        </p>
-    </div>;
+    return (
+      <div style={{ flexGrow: 1 }}>
+        <p>{error}</p>
+      </div>
+    );
   }
   return (
     <Container
@@ -115,7 +112,6 @@ export const Post = () => {
           </Row>
           <BlockContent
             blocks={postData.body}
-            imageOptions={{ w: 700, h: 800, fit: "max" }}
             projectId={process.env.REACT_APP_PROJECT_ID}
             dataset={process.env.REACT_APP_DATASET}
             className="block-content"

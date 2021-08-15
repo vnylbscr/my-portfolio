@@ -32,7 +32,7 @@ const DateTitle = styled(UserTitle)`
 `;
 
 const ReadTimeTitle = styled(DateTitle)`
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 export const Post = () => {

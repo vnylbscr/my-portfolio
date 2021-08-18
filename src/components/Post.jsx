@@ -85,7 +85,7 @@ export const Post = () => {
         <Col className="blog-content bg-transparent">
           <PostTitle>{postData.title.toUpperCase()}</PostTitle>
           <Row className="d-flex justify-content-between align-items-center">
-            <Col className="d-flex justify-content-start align-items-center ml-2 my-5">
+            <Col className="d-flex justify-content-start align-items-center ml-2 my-5 flex-sm-col">
               <Image
                 className="rounded-circle img-fluid"
                 src={urlFor(postData.authorImage).width(60).height(60).url()}
@@ -102,7 +102,7 @@ export const Post = () => {
                   </a>
                 </UserTitle>
               </Col>
-              <Col className="ml-5 date-title">
+              <Col className="ml-5 date-title mt-xs-3">
                 <DateTitle>
                   Son düzenleme {dayjs(postData._createdAt).fromNow()}
                 </DateTitle>
